@@ -10,8 +10,7 @@ export const useCounterStore = defineStore({
   actions: {
     async getList() {
       const result = await getApiList()
-      this.list = result.data
-      console.log(result, this.list, '~!!!!!!!!!!')
+      this.list = result.data || []
     }
   }
 })

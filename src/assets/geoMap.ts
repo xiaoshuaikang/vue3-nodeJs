@@ -32,3 +32,265 @@ export const geoCoordMap: Record<string, Array<number>> = {
   海南: [110.3893, 19.8516],
   上海: [121.4648, 31.2891]
 }
+
+export interface OilPriceType {
+  punctuationAddress: Array<number>
+  city: string
+  value?: Array<number>
+  name?: string
+  '92h': string
+  '95h': string
+  '98h': string
+  '0h': string
+}
+
+export const oilPrice: Array<OilPriceType> = [
+  {
+    punctuationAddress: [],
+    city: '北京',
+    '92h': '7.44',
+    '95h': '7.92',
+    '98h': '8.90',
+    '0h': '7.14'
+  },
+  {
+    punctuationAddress: [],
+    city: '上海',
+    '92h': '7.40',
+    '95h': '7.88',
+    '98h': '8.88',
+    '0h': '7.07'
+  },
+  {
+    punctuationAddress: [],
+    city: '江苏',
+    '92h': '7.41',
+    '95h': '7.88',
+    '98h': '9.06',
+    '0h': '7.06'
+  },
+  {
+    punctuationAddress: [],
+    city: '天津',
+    '92h': '7.43',
+    '95h': '7.85',
+    '98h': '9.13',
+    '0h': '7.10'
+  },
+  {
+    punctuationAddress: [],
+    city: '重庆',
+    '92h': '7.51',
+    '95h': '7.93',
+    '98h': '8.93',
+    '0h': '7.16'
+  },
+  {
+    punctuationAddress: [],
+    city: '江西',
+    '92h': '7.40',
+    '95h': '7.94',
+    '98h': '9.44',
+    '0h': '7.14'
+  },
+  {
+    punctuationAddress: [],
+    city: '辽宁',
+    '92h': '7.41',
+    '95h': '7.90',
+    '98h': '8.61',
+    '0h': '7.00'
+  },
+  {
+    punctuationAddress: [],
+    city: '安徽',
+    '92h': '7.40',
+    '95h': '7.92',
+    '98h': '8.75',
+    '0h': '7.13'
+  },
+  {
+    punctuationAddress: [],
+    city: '内蒙古',
+    '92h': '7.37',
+    '95h': '7.87',
+    '98h': '8.64',
+    '0h': '6.97'
+  },
+  {
+    punctuationAddress: [],
+    city: '福建',
+    '92h': '7.40',
+    '95h': '7.91',
+    '98h': '8.66',
+    '0h': '7.09'
+  },
+  {
+    punctuationAddress: [],
+    city: '宁夏',
+    '92h': '7.34',
+    '95h': '7.76',
+    '98h': '8.86',
+    '0h': '6.98'
+  },
+  {
+    punctuationAddress: [],
+    city: '甘肃',
+    '92h': '7.44',
+    '95h': '7.94',
+    '98h': '8.70',
+    '0h': '7.00'
+  },
+  {
+    punctuationAddress: [],
+    city: '青海',
+    '92h': '7.40',
+    '95h': '7.93',
+    '98h': '8.64',
+    '0h': '7.02'
+  },
+  {
+    punctuationAddress: [],
+    city: '广东',
+    '92h': '7.46',
+    '95h': '8.08',
+    '98h': '9.22',
+    '0h': '7.10'
+  },
+  {
+    punctuationAddress: [],
+    city: '山东',
+    '92h': '7.40',
+    '95h': '7.94',
+    '98h': '8.66',
+    '0h': '7.01'
+  },
+  {
+    punctuationAddress: [],
+    city: '广西',
+    '92h': '7.50',
+    '95h': '8.10',
+    '98h': '9.20',
+    '0h': '7.15'
+  },
+  {
+    punctuationAddress: [],
+    city: '山西',
+    '92h': '7.39',
+    '95h': '7.98',
+    '98h': '8.68',
+    '0h': '7.16'
+  },
+  {
+    punctuationAddress: [],
+    city: '贵州',
+    '92h': '7.57',
+    '95h': '8.00',
+    '98h': '8.90',
+    '0h': '7.20'
+  },
+  {
+    punctuationAddress: [],
+    city: '陕西',
+    '92h': '7.33',
+    '95h': '7.74',
+    '98h': '9.74',
+    '0h': '6.99'
+  },
+  {
+    punctuationAddress: [],
+    city: '海南',
+    '92h': '8.55',
+    '95h': '9.08',
+    '98h': '10.28',
+    '0h': '7.18'
+  },
+  {
+    punctuationAddress: [],
+    city: '四川',
+    '92h': '7.54',
+    '95h': '8.05',
+    '98h': '8.75',
+    '0h': '7.15'
+  },
+  {
+    punctuationAddress: [],
+    city: '河北',
+    '92h': '7.43',
+    '95h': '7.85',
+    '98h': '8.68',
+    '0h': '7.10'
+  },
+  {
+    punctuationAddress: [],
+    city: '西藏',
+    '92h': '8.32',
+    '95h': '8.80',
+    '98h': '9.81',
+    '0h': '7.64'
+  },
+  {
+    punctuationAddress: [],
+    city: '河南',
+    '92h': '7.44',
+    '95h': '7.95',
+    '98h': '8.60',
+    '0h': '7.08'
+  },
+  {
+    punctuationAddress: [],
+    city: '新疆',
+    '92h': '7.23',
+    '95h': '7.74',
+    '98h': '8.65',
+    '0h': '6.88'
+  },
+  {
+    punctuationAddress: [],
+    city: '黑龙江',
+    '92h': '7.47',
+    '95h': '7.97',
+    '98h': '9.04',
+    '0h': '6.95'
+  },
+  {
+    punctuationAddress: [],
+    city: '吉林',
+    '92h': '7.40',
+    '95h': '7.98',
+    '98h': '8.70',
+    '0h': '7.01'
+  },
+  {
+    punctuationAddress: [],
+    city: '云南',
+    '92h': '7.58',
+    '95h': '8.14',
+    '98h': '8.82',
+    '0h': '7.17'
+  },
+  {
+    punctuationAddress: [],
+    city: '湖北',
+    '92h': '7.45',
+    '95h': '7.97',
+    '98h': '8.96',
+    '0h': '7.09'
+  },
+  {
+    punctuationAddress: [],
+    city: '浙江',
+    '92h': '7.41',
+    '95h': '7.88',
+    '98h': '8.64',
+    '0h': '7.08'
+  },
+  {
+    punctuationAddress: [],
+    city: '湖南',
+    '92h': '7.39',
+    '95h': '7.86',
+    '98h': '8.66',
+    '0h': '7.16'
+  }
+]

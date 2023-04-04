@@ -11,29 +11,47 @@ import { useCounterStore } from './stores/counter'
 import { onMounted } from 'vue'
 import * as echarts from 'echarts'
 import './assets/china'
-import { geoCoordMap } from '@/assets/geoMap'
 
 const store = useCounterStore()
 
 onMounted(async () => {
   await store.getList()
-  console.log(store.list)
-  store.list.data.map((idx) => {
-    // console.log(idx, 'idx')
-  })
 
   const chartMap = echarts.init(document.querySelector('#container-center-map') as HTMLElement)
-  const data = [
-    {
-      name: '内蒙古',
-      itemStyle: {
-        areaColor: '#56b1da'
-      },
-      value: [110.3467, 41.4899]
-    }
-  ]
 
   chartMap.setOption({
+    tooltip: {
+      trigger: 'item',
+      formatter(value: any) {
+        if (!value?.data?.name) return
+        return (
+          value.data.name +
+          '<br>' +
+          '92:' +
+          value.data['92h'] +
+          '/L<br>' +
+          '95:' +
+          value.data['95h'] +
+          '/L<br>' +
+          '98:' +
+          value.data['98h'] +
+          '/L<br>' +
+          '0:' +
+          value.data['0h'] +
+          '/L<br>'
+        )
+      }
+    },
+    visualMap: {
+      show: true,
+      left: 'left',
+      top: 'bottom',
+      calculable: false,
+      seriesIndex: [1],
+      inRange: {
+        color: ['#00467F', '#A5CC82']
+      }
+    },
     geo: {
       map: 'china',
       aspectScale: 0.8,
@@ -119,7 +137,7 @@ onMounted(async () => {
             color: '#fff'
           }
         },
-        data: data
+        data: store.list
       },
       {
         type: 'scatter',
@@ -127,12 +145,16 @@ onMounted(async () => {
         symbol: 'pin',
         symbolSize: [145, 100],
         label: {
-          show: true
+          show: true,
+          color: '#fff',
+          formatter(value: any) {
+            return value.data['0h']
+          }
         },
         itemStyle: {
           color: '#37d83f' //标志颜色
         },
-        data: data
+        data: store.list
       }
     ]
   })
